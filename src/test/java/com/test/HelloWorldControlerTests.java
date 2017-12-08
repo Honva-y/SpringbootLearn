@@ -14,6 +14,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.honva.Application;
+import com.honva.common.MyProperty;
 import com.honva.controller.HelloController;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes=Application.class)
