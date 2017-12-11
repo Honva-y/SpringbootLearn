@@ -26,7 +26,7 @@ public class HelloController {
 	@RequestMapping("/getPerson")
 	@ResponseBody
 	public Person getPerson(){
-		Person p = new Person("Honva",10,"Man");
+		Person p = new Person("Honva",10,"Man"); 
 		System.out.println("getTitle:"+property.getTitle());
 		System.out.println("getDescrpit:"+property.getDescrpit());
 		return p;
