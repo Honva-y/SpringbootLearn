@@ -9,7 +9,7 @@ import com.honva.common.MyProperty;
 
 @SpringBootApplication
 @EnableConfigurationProperties(MyProperty.class)
-@MapperScan("com.honva.mapper")
+@MapperScan("com.honva.dao")
 public class Application {
 	
 	

@@ -18,8 +18,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.honva.Application;
 import com.honva.controller.HelloController;
+import com.honva.dao.StundetDao;
 import com.honva.entity.Student;
-import com.honva.mapper.StundetMapper;
 
 
 @RunWith(SpringRunner.class)
@@ -55,7 +55,8 @@ public class AppTest {
 	}
 /**-----------------------------------------------**/
 	@Autowired
-	private StundetMapper mapper;
+	private StundetDao mapper;
+	
 	@Test
 	public void getUser(){
 		List<Student> list = mapper.getAll();
@@ -64,6 +65,5 @@ public class AppTest {
 			System.out.println("age:"+student.getUserAge());
 		}
 	}
-	
 	
 }
