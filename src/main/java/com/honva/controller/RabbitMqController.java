@@ -12,6 +12,7 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.ConsumerCancelledException;
+import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.QueueingConsumer;
 import com.rabbitmq.client.ShutdownSignalException;
 
@@ -36,7 +37,6 @@ public class RabbitMqController {
 		channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
 		String message = msg;
-//		String message = "hello world rabbitMQ!";
 
 		channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
 
@@ -64,6 +64,9 @@ public class RabbitMqController {
 
 		System.out.println("[*] Waiting for message. To exist press CTRL+C");
 
+//		DefaultConsumer defaultConsumer = new DefaultConsumer(channel);
+//		channel.basicConsume(QUEUE_NAME, defaultConsumer);
+		
 		QueueingConsumer consumer = new QueueingConsumer(channel);
 		channel.basicConsume(QUEUE_NAME, consumer);
 

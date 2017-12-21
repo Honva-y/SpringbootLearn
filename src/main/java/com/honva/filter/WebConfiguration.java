@@ -41,8 +41,8 @@ public class WebConfiguration {
 		FilterRegistrationBean bean = new FilterRegistrationBean();
 		bean.setFilter(new MyFilter());
 		bean.addUrlPatterns("/*");
-		bean.addInitParameter("param", "value");
-		bean.setName("MyFilter");
+//		bean.addInitParameter("param", "value");
+//		bean.setName("MyFilter");
 		
 		bean.setOrder(1);
 		return bean;
